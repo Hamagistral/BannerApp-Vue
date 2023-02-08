@@ -2,7 +2,7 @@
   <div>
     <template>
       <v-form class="primary pa-8 lighten-4 rounded" ref="form" v-model="valid" lazy-validation>
-        <v-btn color="primary" class="mr-4">
+        <v-btn color="primary" class="mr-4" to="/">
           Fermer
         </v-btn>
 
@@ -14,9 +14,8 @@
           Ajouter Image
         </v-btn>
 
-        <v-btn>
-          
-            <v-text-field v-model="color" v-mask="mask" hide-details class="ma-0 pa-0" solo>
+        <v-btn class="mr-4">
+            <v-text-field v-model="color" v-mask="mask" hide-details solo>
               <template v-slot:append>
                 <v-menu v-model="menu" top nudge-bottom="105" nudge-left="16" :close-on-content-click="false">
                   <template v-slot:activator="{ on }">
@@ -53,7 +52,7 @@
         </template>
       </v-form>
     </template>
-
+  
     <div v-for="(course, index) in courses" :key="`text-${index}`">
       <WidgetText></WidgetText>
     </div>
@@ -83,7 +82,7 @@ export default {
 
       preview: [
         {
-          name: "AAA.jpg",
+          
           chosenFile: "yasser",
         },
       ],
@@ -112,8 +111,8 @@ export default {
     },
     addImage() {
       if(this.chosenFile) {
-      this.previewImages.push(...this.chosenFile);
-      this.clean();
+        this.previewImages.push(...this.chosenFile);
+        this.clean();
       } else {
         alert('Erreur, Veuillez choisir !')
       }

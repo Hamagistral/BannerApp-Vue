@@ -2,7 +2,7 @@
   <v-app>
     <v-main>
       <v-container class="pa-12" fluid>
-        <router-view align="center" justify="center" ></router-view>
+        <router-view justify="center" ></router-view>
       </v-container>
     </v-main>
   </v-app>

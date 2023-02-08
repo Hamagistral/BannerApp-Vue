@@ -25,7 +25,7 @@
           <h1>{{ previews.name }}</h1>
                   <img
                     class="imagePreviewWrapper"
-                    v-bind:src="require('./' + previews.name)"
+                    v-bind:src="require('../assets/' + previews.name)"
                   />
         </Draggable>
       </Container>
@@ -74,6 +74,10 @@ export default {
 }
 .vue-grid-layout {
   background: #eee;
+}
+div.vue-grid-layout {
+  background: #eee;
+  display: inline;
 }
 .vue-grid-item:not(.vue-grid-placeholder) {
   background: #ccc;

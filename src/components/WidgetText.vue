@@ -57,8 +57,11 @@ export default {
 .vue-grid-layout {
   background: red;
 }
+div.vue-grid-layout {
+  display: inline;
+}
 .vue-grid-item:not(.vue-grid-placeholder) {
-  background: #ccc;
+  background: #e9e9e9;
   border: 1px solid black;
 }
 .vue-grid-item .resizing {
@@ -96,8 +99,6 @@ export default {
   height: 20px;
   top: 0;
   left: 0;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'><circle cx='5' cy='5' r='5' fill='#999999'/></svg>")
-    no-repeat;
   background-position: bottom right;
   padding: 0 8px 8px 0;
   background-repeat: no-repeat;
